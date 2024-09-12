@@ -5,4 +5,4 @@ paymentmethod as payment_method,
 status,
 amount/100 as amount,
 created 
-from stripe_payments
+from {{ source('jaffle_shop', 'stripe_payments') }}
