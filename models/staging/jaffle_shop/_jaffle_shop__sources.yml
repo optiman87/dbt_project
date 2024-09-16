@@ -9,5 +9,15 @@ sources:
           error_after: {count: 36, period: hour}
     tables:
       - name: jaffle_shop_customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
         freshness: null
       - name: jaffle_shop_orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
